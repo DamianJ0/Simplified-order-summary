@@ -1,5 +1,4 @@
 body {
-  position: relative;
   width: 1440px;
   height: 810px;
   background: #F8F9FE;
@@ -16,6 +15,9 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .top-section {
@@ -49,7 +51,12 @@ body {
   border: none;
 }
 
-.cancel {
+#proceed-btn:hover {
+  background: #490245;
+  transition: 0.2s;
+}
+
+#cancel {
   position: absolute;
   width: 100px;
   height: 26px;
@@ -71,7 +78,6 @@ body {
   body {
     position: absolute;
     width: 100%;
-    height: 100%;
     background: #F8F9FE;
   }
   #home-page {
@@ -114,7 +120,6 @@ body {
   body {
     position: absolute;
     width: 100%;
-    height: 100%;
     background: #F8F9FE;
   }
   #home-page {
@@ -146,6 +151,50 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
+    line-height: 160%;
+    text-align: right;
+    letter-spacing: -0.01em;
+    color: #151827;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    position: absolute;
+    width: 100%;
+    background: #F8F9FE;
+  }
+  #home-page {
+    width: 260px;
+    height: 580px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .top-section {
+    position: absolute;
+    width: 260px;
+    height: 188px;
+  }
+  .top-section img {
+    width: 260px;
+    height: 188px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  #proceed-btn {
+    width: 230px;
+    top: 460px;
+    font-size: 14px;
+  }
+  .cancel {
+    width: 88px;
+    height: 22px;
+    left: 80px;
+    top: 524px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
     line-height: 160%;
     text-align: right;
     letter-spacing: -0.01em;

@@ -3,6 +3,25 @@
 
 import '../styles/home-page.scss'
 
-import { setupCounter } from '../../../global-scripts/scripts/counter/counter.js'
+document.getElementById("changeCursor").style.cursor = "pointer";
+document.getElementById("cancel").style.cursor = "pointer";
 
-setupCounter(document.querySelector('#counter'))
+const button = document.getElementById("proceed-btn");
+
+button.addEventListener("click", function () {
+    button.innerHTML = "...";
+    button.disabled = true;
+
+
+    const intervalId = setInterval(function() {
+        button.innerHTML += ".";
+
+    },500);
+
+    setTimeout(function() {
+        clearInterval(intervalId);
+        button.innerHTML = "Complete";
+        button.disabled = true;
+
+    }, 5000);
+});
